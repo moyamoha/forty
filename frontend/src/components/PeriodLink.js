@@ -43,7 +43,7 @@ export default function PeriodLink({ period }) {
       <span>-</span>
       <span>{getPeriodStartAndEnd(period).end.toLocaleDateString()}</span>
       <span>
-        Habits:{' '}
+        Activities:{' '}
         {getHabitsText(period.habits).truncated ? (
           <>
             <span>{getHabitsText(period.habits).value}</span>
