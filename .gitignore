@@ -5,6 +5,7 @@ frontend/build
 40days/node_modules
 40days/node_modules
 40days/html/*
+40days/data
 
 */.vscode/*
 */.vscode
