@@ -1,0 +1,11 @@
+frontend/node_modules
+frontend/build
+
+40days/out
+40days/node_modules
+
+*/.vscode/*
+*/.vscode
+
+.vscode
+.vscode/*

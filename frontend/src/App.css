@@ -1,0 +1,71 @@
+.App {
+  min-width: 100vw;
+}
+
+.toggle-view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: inherit;
+  font-size: 1.1rem;
+  border-radius: 0px;
+  margin-right: 20px;
+}
+
+.toggle-view .toggle-line {
+  display: flex;
+  align-items: center;
+}
+
+.table {
+  border: 1px solid red;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.date-col {
+  width: 40px;
+}
+
+.table thead th, .table tbody td{
+  border: 1px solid rgb(54, 106, 165);
+}
+
+td {
+  padding: 2px;
+}
+
+.period-view {
+  position: relative;
+  padding: 20px;
+  padding-top: 10px;
+  display: flex;
+}
+
+.period-view-content {
+  min-width: 50%;
+}
+
+
+/* mark modal */
+
+
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  cursor: pointer;
+  color: red;
+}
+
+.back-btn {
+  color: #044cd0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 10px 0 10px 10px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}

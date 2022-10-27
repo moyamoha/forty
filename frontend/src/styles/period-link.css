@@ -1,0 +1,31 @@
+.period-link-cont {
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 20px;
+    padding: 10px;
+}
+
+.period-link-cont .link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.over-link {
+    border-left: 10px solid tomato;
+}
+
+.pending-link {
+    border-left: 10px solid #044cd0;
+}
+
+.ongoing-link {
+    border-left: 10px solid #1fae51;
+}
+
+.period-options {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}

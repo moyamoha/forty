@@ -1,0 +1,41 @@
+.period-form {
+    padding: 20px 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    background-color: rgb(185, 221, 252);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.period-form .form-line {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.period-form .form-line input {
+    padding: 5px;
+    outline: none;
+    border: 1px solid #23272e;
+    border-radius: 5px;
+}
+
+.period-form button {
+    padding: 5px;
+    outline: none;
+    border: 1px solid #23272e;
+    border-radius: 5px;
+}
+
+.period-form .cancel-btn {
+    background-color: tomato;
+}
+
+.period-form .save-btn {
+    background-color: greenyellow;
+}

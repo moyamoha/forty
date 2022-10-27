@@ -1,0 +1,20 @@
+.intro {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.home-link {
+    color: darkcyan;
+    text-decoration: none;
+    letter-spacing: 1.05px;
+}
