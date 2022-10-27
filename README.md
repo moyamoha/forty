@@ -15,4 +15,4 @@
 
 If you repeat an activity for forty days continously, that activity becomes part of your habits. For example, if you were too lazy to exercise before, once you exercise forty days back to back, after that period, it is one of your habits. The key is here consistency.
 
-\*Download app from [here](https://yahyasalimi.com)
+**Download app from [here](https://yahyasalimi.com)**
