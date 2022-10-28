@@ -27,9 +27,9 @@ export default function PeriodLink({ period }) {
 
   const getHabitsText = (habits) => {
     const tulos = habits.map((h) => h.title).join(', ');
-    return tulos.length > 30
+    return tulos.length > 20
       ? {
-          value: tulos.substring(0, 30),
+          value: tulos.substring(0, 20),
           truncated: true,
         }
       : { value: tulos, truncated: false };
