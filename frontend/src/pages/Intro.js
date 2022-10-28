@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/intro.css';
+import useSetTitle from '../useSetTitle';
 
 export default function Intro() {
+  useSetTitle('Welcome');
   return (
     <div className="intro">
       <div className="intro-container">

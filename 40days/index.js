@@ -24,7 +24,7 @@ const createWindow = () => {
       : `file:/${path.join(__dirname)}/html/index.html`
   );
   win.setMenuBarVisibility(false);
-  win.setIcon("./assets/40.jpg");
+  win.setIcon(`${path.join(__dirname)}/assets/40.jpg`);
 };
 
 let server = null;

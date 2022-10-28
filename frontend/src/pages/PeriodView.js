@@ -6,10 +6,12 @@ import { NAKYMA } from '../utils';
 import PeriodTable from '../components/PeriodTable';
 import CalendarView from '../components/CalendarView';
 import Layout from '../components/Layout';
+import useSetTitle from '../useSetTitle';
 
 export default function PeriodView() {
   const period = useSelector((s) => s.data.selectedPeriod);
   const view = useSelector((s) => s.ui.periodView);
+  useSetTitle(period.name);
 
   return (
     <Layout>
