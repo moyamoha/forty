@@ -24,25 +24,31 @@ const createWindow = () => {
       : `file:/${path.join(__dirname)}/html/index.html`
   );
   win.setMenuBarVisibility(false);
+  win.setIcon("./assets/40.jpg");
 };
 
 let server = null;
-app.whenReady().then(() => {
-  server = startServer();
-  const appDataFolder = getAppDataFolder(
-    os.userInfo().username,
-    app.name,
-    process.platform
-  );
-  const dataFilePath = isDev
-    ? "data/data.json"
-    : `${path.join(appDataFolder, "data.json")}`;
-  if (!existsSync(dataFilePath)) {
-    mkdirSync(appDataFolder, { recursive: true });
-    appendFileSync(dataFilePath, JSON.stringify([]));
-  }
-  createWindow();
-});
+const whenReady = async () => {
+  try {
+    await app.whenReady();
+    server = await startServer();
+    const appDataFolder = getAppDataFolder(
+      os.userInfo().username,
+      app.name,
+      process.platform
+    );
+    const dataFilePath = isDev
+      ? "data/data.json"
+      : `${path.join(appDataFolder, "data.json")}`;
+    if (!existsSync(dataFilePath)) {
+      mkdirSync(appDataFolder, { recursive: true });
+      appendFileSync(dataFilePath, JSON.stringify([]));
+    }
+    createWindow();
+  } catch (e) {}
+};
+
+whenReady();
 
 app.on("window-all-closed", () => {
   app.quit();
