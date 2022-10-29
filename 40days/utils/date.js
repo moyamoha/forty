@@ -6,6 +6,13 @@ const dateEqualsIgnoreTime = (date1, date2) => {
   );
 };
 
+function addDays(date, days) {
+  var result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
+
 module.exports = {
   dateEqualsIgnoreTime,
+  addDays,
 };

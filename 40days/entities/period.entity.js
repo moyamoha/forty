@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
-const addDays = require("date-fns/addDays");
+const addDays = require("../utils/date").addDays;
 const Habit = require("./habit.entity");
 const markStatus = require("./mark-status.enum");
 const Mark = require("./mark.entity");
@@ -25,7 +25,7 @@ class Period {
   addHabit(habit) {
     this.habits.push(habit);
     for (let i = 0; i < 40; i++) {
-      const m = new Mark(habit.id, addDays(new Date(this.startDate), i));
+      const m = new Mark(habit.id, addDays(this.startDate, i));
       this.marks.push(m);
     }
   }
