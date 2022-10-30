@@ -34,7 +34,6 @@ export default function PeriodModal() {
     } else {
       dispatch(editPeriodName({ name: formData.name }));
     }
-    setFormData({ ...formData, name: '' });
     dispatch(setShowPeriodForm(false));
     dispatch(setSelectedPeriod(null));
   };

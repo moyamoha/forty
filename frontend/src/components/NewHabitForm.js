@@ -11,9 +11,8 @@ export default function NewHabitForm() {
     e.preventDefault();
     if (title.length > 0) {
       dispatch(addHabit(title));
-    } else {
-      return;
     }
+    setTitle('');
   };
   const getBtnColor = () => {
     return title.length > 0 ? 'green' : 'grey';
