@@ -1,7 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { setPeriodView } from '../state/slices/ui.slice';
 import { NAKYMA } from '../utils';
+
+import '../styles/view-toggle.css';
 
 export default function ToggleView() {
   const dispatch = useDispatch();
@@ -11,26 +14,27 @@ export default function ToggleView() {
   };
   return (
     <div className="toggle-view">
-      <div className="toggle-line">
+      <div>
         <input
           type={'radio'}
           value={NAKYMA.CALENDAR}
           name="view-toggle"
           checked={view === NAKYMA.CALENDAR}
+          id="calendar-view"
           onChange={changeNakyma}
         ></input>
-        <label>Calendar view</label>
+        <label htmlFor="calendar-view">Calendar view</label>
       </div>
-      <br></br>
-      <div className="toggle-line">
+      <div>
         <input
           type={'radio'}
           value={NAKYMA.TABLE}
           name="view-toggle"
+          id="table-view"
           checked={view === NAKYMA.TABLE}
           onChange={changeNakyma}
         ></input>
-        <label>Table view</label>
+        <label htmlFor="table-view">Table view</label>
       </div>
     </div>
   );

@@ -2,22 +2,6 @@
   min-width: 100vw;
 }
 
-.toggle-view {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: none;
-  background-color: inherit;
-  font-size: 1.1rem;
-  border-radius: 0px;
-  margin-right: 20px;
-}
-
-.toggle-view .toggle-line {
-  display: flex;
-  align-items: center;
-}
-
 .table {
   border: 1px solid red;
   width: 90%;

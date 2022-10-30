@@ -17,12 +17,12 @@ export default function PeriodView() {
     <Layout>
       <div className="period-view">
         <div className="period-view-content">
+          <ToggleView></ToggleView>
           {view === NAKYMA.TABLE ? (
             <PeriodTable period={period}></PeriodTable>
           ) : (
             <CalendarView period={period}></CalendarView>
           )}
-          <ToggleView></ToggleView>
         </div>
       </div>
     </Layout>
