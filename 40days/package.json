@@ -8,6 +8,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
+    "make-zip": "electron-forge make --targets=@electron-forge/maker-zip",
     "package-all": "node package-all.js"
   },
   "author": "Yahya",
@@ -43,7 +44,8 @@
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
-            "darwin"
+            "darwin",
+            "linux"
           ]
         },
         {

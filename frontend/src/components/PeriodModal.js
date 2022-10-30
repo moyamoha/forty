@@ -33,8 +33,8 @@ export default function PeriodModal() {
       dispatch(createNewPeriod({ name: formData.name, startDate: formData.startDate }));
     } else {
       dispatch(editPeriodName({ name: formData.name }));
-      setFormData({ ...formData, name: '' });
     }
+    setFormData({ ...formData, name: '' });
     dispatch(setShowPeriodForm(false));
     dispatch(setSelectedPeriod(null));
   };
