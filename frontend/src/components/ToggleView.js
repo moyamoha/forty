@@ -9,6 +9,7 @@ import '../styles/view-toggle.css';
 export default function ToggleView() {
   const dispatch = useDispatch();
   const view = useSelector((s) => s.ui.periodView);
+  const period = useSelector((s) => s.data.selectedPeriod);
   const changeNakyma = (e) => {
     dispatch(setPeriodView(e.target.value));
   };
@@ -33,6 +34,7 @@ export default function ToggleView() {
           id="table-view"
           checked={view === NAKYMA.TABLE}
           onChange={changeNakyma}
+          disabled={period.habits.length === 0}
         ></input>
         <label htmlFor="table-view">Table view</label>
       </div>

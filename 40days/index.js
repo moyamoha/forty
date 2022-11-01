@@ -7,11 +7,15 @@ const os = require("os");
 const { getAppDataFolder } = require("./utils/get-data-folder");
 const { startServer } = require("./server");
 
+const gotTheLock = app.requestSingleInstanceLock();
+let win;
+let server = null;
+
 const createWindow = () => {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
-    resizable: false,
+    minWidth: 600,
     webPreferences: {
       nodeIntegration: true,
       webSecurity: false,
@@ -27,7 +31,6 @@ const createWindow = () => {
   win.setIcon(`${path.join(__dirname)}/assets/40.jpg`);
 };
 
-let server = null;
 const whenReady = async () => {
   try {
     await app.whenReady();
@@ -48,9 +51,18 @@ const whenReady = async () => {
   } catch (e) {}
 };
 
-whenReady();
-
-app.on("window-all-closed", () => {
+if (!gotTheLock) {
   app.quit();
-  server.close();
-});
+} else {
+  app.on("second-instance", (event) => {
+    if (win) {
+      if (win.isMinimized()) win.restore();
+    }
+    win.focus();
+  });
+  whenReady();
+  app.on("window-all-closed", () => {
+    app.quit();
+    server.close();
+  });
+}
